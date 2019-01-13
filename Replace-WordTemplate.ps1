@@ -44,7 +44,7 @@ $wdReplaceAll = 2
 $Headers = $Mappings | Get-member -MemberType 'NoteProperty' | Select-Object -ExpandProperty 'Name'
 
 $Word = New-Object -comobject Word.Application  
-$Word.Visible = $True
+$Word.Visible = $False
 
 $Document = $Word.Documents.Open($Template) 
 $DocumentText = $Word.Selection 
